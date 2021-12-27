@@ -65,4 +65,9 @@ public final class Constants {
 
         public static final int pigeonTalonId = 9;
     }
+
+    public static final class Joysticks {
+        public static final int driverControllerPort = 0;
+    }
+
 }
