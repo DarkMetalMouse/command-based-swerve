@@ -62,5 +62,7 @@ public final class Constants {
         public static final SwerveModuleConstants BRModule = new SwerveModuleConstants(new Translation2d(wheelBase / 2, -trackWidth / 2), 7, 8);
         public static final SwerveModuleConstants TLModule = new SwerveModuleConstants(new Translation2d(-wheelBase / 2, trackWidth / 2), 3, 4);
         public static final SwerveModuleConstants BLModule = new SwerveModuleConstants(new Translation2d(-wheelBase / 2, -trackWidth / 2), 5, 6);
+
+        public static final int pigeonTalonId = 9;
     }
 }
