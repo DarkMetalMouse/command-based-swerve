@@ -13,7 +13,7 @@ import frc.robot.util.PIDFGains;
 
 public class SwerveModule {
 
-    private static final int DEGREES_IN_ROATION = 360;
+    private static final int DEGREES_IN_ROTATION = 360;
     private static final int SECONDS_IN_MINUTE = 60;
     private final CANSparkMax m_driveSparkMax;
     private final CANPIDController m_drivePID;
@@ -39,7 +39,7 @@ public class SwerveModule {
 
         this.m_steeringPID = this.m_steeringSparkMax.getPIDController();
         this.m_steeringEncoder = this.m_steeringSparkMax.getEncoder();
-        this.m_steeringEncoder.setPositionConversionFactor(SwerveModuleConstants.steeringRatio * DEGREES_IN_ROATION); // convert motor rotations to wheel angle
+        this.m_steeringEncoder.setPositionConversionFactor(SwerveModuleConstants.steeringRatio * DEGREES_IN_ROTATION); // convert motor rotations to wheel angle
 
         setPIDGains(this.m_drivePID, constants.driveGains);
         setPIDGains(this.m_steeringPID, constants.steeringGains);
@@ -91,9 +91,9 @@ public class SwerveModule {
      * @return The current angle of the wheel
      */
     public double getWheelAngle() {
-        double pos = this.m_steeringEncoder.getPosition() / DEGREES_IN_ROATION;
+        double pos = this.m_steeringEncoder.getPosition() / DEGREES_IN_ROTATION;
         pos = pos - Math.floor(pos);
-        return pos * DEGREES_IN_ROATION;
+        return pos * DEGREES_IN_ROTATION;
     }
 
     /**
